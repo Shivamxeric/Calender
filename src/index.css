@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans bg-gray-100 text-gray-900;
+}
+
+.calendar-container {
+  @apply flex justify-between items-center p-4;
+}
+
+.calendar {
+  @apply grid grid-cols-7 gap-2;
+}
+
+.day {
+  @apply p-4 bg-white rounded-lg shadow-md;
+}
+
+.day.today {
+  @apply bg-blue-200;
+}
+
+.date {
+  @apply font-bold text-xl;
+}
+
+.event {
+  @apply text-sm bg-blue-500 text-white p-2 rounded mt-1 cursor-pointer;
+}
+
+.event-form input, .event-form textarea {
+  @apply p-2 border border-gray-300 rounded w-full mt-2;
+}
+
+.event-form button {
+  @apply mt-4 p-2 bg-blue-500 text-white rounded;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center;
+}
+
+.modal-content {
+  @apply bg-white p-6 rounded-lg shadow-lg;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+body{
+  background-color: #212121;
+}
+/* Highlight the current day with a yellow background */
+.bg-yellow-300 {
+  background-color: #fef08a;
+}
+
+/* Style for the days with events (blue background) */
+.bg-blue-200 {
+  background-color: #cce4ff;
+}
+
+.bg-blue-300 {
+  background-color: #99c2ff;
+}
+
+/* Red dot indicator for events */
+.text-red-500 {
+  color: #ef4444;
+}
